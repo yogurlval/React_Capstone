@@ -9,7 +9,7 @@ const Home = () => {
         <div className="headerContainer">
         <h1>Phở King</h1>
         <p>Delicious Phở, Exquisite Oriental Dishes, and Great Prices</p>
-        <Link>
+        <Link to="/menu">
         <button>ORDER NOW</button>
         </Link>
         </div>

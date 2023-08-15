@@ -3,6 +3,7 @@ import logo from "../assets/phoKing.png";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 import ReorderRoundedIcon from '@mui/icons-material/ReorderRounded';
+import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 
 const Navbar = () => {
     const [openLinks, setOpenLinks] = useState(false);
@@ -20,6 +21,7 @@ const Navbar = () => {
         <Link to="/menu">Menu</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
+        <Link to="/cart"><ShoppingBasketOutlinedIcon/></Link>
         </div>
       </div>
       <div className="rightSide">
@@ -27,6 +29,7 @@ const Navbar = () => {
         <Link to="/menu">Menu</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
+        <Link to="/cart"><ShoppingBasketOutlinedIcon/></Link>
         <button onClick={toggleNavbar}>
         <ReorderRoundedIcon/>
         </button>
