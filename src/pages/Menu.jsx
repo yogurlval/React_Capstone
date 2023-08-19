@@ -7,9 +7,19 @@ const Menu = () => {
 
   useEffect(() => {
     axios.get('/menu')
-      .then(response => setMenuItems(response.data))
+      .then(response => {
+        console.log(response.data); // Check the fetched data
+        setMenuItems(response.data);
+      })
       .catch(error => console.log(error));
   }, []);
+
+  // const placeholderData= [{
+  //   item_name: 'sushi',
+  //   item_type: 'fish',
+  //   description: 'please work',
+  //   price: 9.99
+  // }]
 
   return (
     <div className="menu">
