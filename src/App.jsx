@@ -9,12 +9,14 @@ import Footer from './components/Footer'
 import About from './pages/About'
 import Contact from './pages/Contact'
 import Cart from './pages/Cart'
+import { CartProvider } from './components/CartContext'
 
 function App() {
 
 
   return (
     <div className="App">
+      <CartProvider>
       <Router>
       <Navbar />
       <Routes>
@@ -26,6 +28,7 @@ function App() {
       </Routes>
       <Footer/>
       </Router>
+      </CartProvider>
     </div>
   )
 }

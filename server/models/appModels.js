@@ -49,7 +49,7 @@ const {sequelize} = require('../util/database')
     requests: DataTypes.TEXT
   })
 
-
+//submit this to database once order has been submitted
 Order.hasMany(Order_Item, { foreignKey: 'order_id' });
 Order_Item.belongsTo(Order, { foreignKey: 'order_id' });
 

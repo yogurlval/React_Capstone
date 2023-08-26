@@ -1,3 +1,4 @@
+require('dotenv').config()
 const express = require('express')
 const cors = require('cors')
 const app = express()
@@ -20,7 +21,7 @@ app.get('/menu', getAllItems)
 
 
 sequelize
-    .sync({ force: true })
+    .sync({force: true})
     .then(async () => {
         console.log('tables and seed data sent');
         await seed(); // Wait for the seed function to complete

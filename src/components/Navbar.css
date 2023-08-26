@@ -42,7 +42,19 @@
   }
   
   .navbar .rightSide svg {
-    font-size: 40px;
+    font-size: 35px;
+    padding: 0px;
+  }
+
+  .cartCount {
+    position: absolute;
+    top: 27px;
+    right: 43px;
+    background-color: rgb(237, 116, 136);
+    color: white;
+    border-radius: 50%;
+    padding: 4px 9px;
+    font-size: 12px;
   }
   
   .navbar #open {
