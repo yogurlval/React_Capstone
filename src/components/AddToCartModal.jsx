@@ -26,10 +26,11 @@ const AddToCartModal = ({ item, onClose, onAddToCart }) => {
   };
 
   return (
+    
     <div className="modal-overlay">
       <div className="modal">
         <h2>Add to Cart: {item.name}</h2>
-        <h4>{item.description}</h4>
+        <h3>{item.description}</h3>
         <p>Select Size:</p>
         {Object.keys(sizeOptions).map((size) => (
           <label key={size}>
@@ -42,8 +43,12 @@ const AddToCartModal = ({ item, onClose, onAddToCart }) => {
             {size} - {sizeOptions[size]}
           </label>
         ))}
+        <br />
+        <br />
         <label>
           Any Special Requests?:
+          <br />
+          <br />
           <textarea
           className="requestBox"
             placeholder="If you would like extras of an item, please navigate to our 'Extras' tab and select from the items there :)"
@@ -51,7 +56,9 @@ const AddToCartModal = ({ item, onClose, onAddToCart }) => {
             onChange={(e) => setSpecialRequests(e.target.value)}
           />
         </label>
+        <br />
         <button onClick={handleAddToCart}>Add to Cart</button>
+        <br />
         <button onClick={onClose}>Cancel</button>
       </div>
     </div>

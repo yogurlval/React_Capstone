@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
+.addToCartBtn {
+    background-color: peachpuff;
+    font-family: 'DM Sans', sans-serif;
+    width: 40%;
+    height: 10%;
+    border-width: 1px;
+
+}
+
+.addToCartBtn:hover{
+    background-color: rgb(221, 119, 119);
+    cursor: pointer;
+}

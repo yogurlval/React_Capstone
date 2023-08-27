@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&display=swap');
+
 .menu {
     width: 100%;
     height: auto;
@@ -6,27 +9,65 @@
     align-items: center;
     flex-direction: column;
   }
+  
   .menu .menuTitle {
-    /* font-family: cursive; */
     font-size: 13px;
   }
   
-  .menuList {
-    width: 70vw;
+  .menuTabs {
+    border: none;
+    margin: 6px;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.5em;
+    background-color: inherit;
+    border-bottom: 2px solid rgb(226, 162, 173);
+    opacity: 50%;
+    width: auto;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    place-items: center;
+  }
+
+  .menuTabs:hover {
+    border-bottom: 2px double rgb(245, 179, 122);
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 70%;
+  }
+
+  .menuTabs:focus{
+    border-bottom: 2px solid lightcoral;
+    opacity: 100%;
+    font-weight: 600;
+  }
+
+  .menuList {
+    width: auto;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tabTitles{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: larger;
   }
   
   /* MENU ITEM STYLING */
   
   .menuItem {
     border-radius: 15px;
-    width: 300px;
-    height: 350px;
+    width: 350px;
+    height: 275px;
     margin: 20px;
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   .menuItem:hover {
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.5);
@@ -34,7 +75,7 @@
     cursor: pointer;
   }
   
-  .menuItem div {
+  /* .menuItem div {
     border-top-left-radius: 15px;
     border-top-right-radius: 15px;
     width: 100%;
@@ -42,11 +83,20 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
   
-  .menuItem h1,
   .menuItem p {
-    margin-left: 20px;
+    margin: 15px;
+    font-size: larger;
+    padding-left: 15px;
+    padding-right: 15px;
+
+  }
+
+  .menuItem h1{
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 0px;
   }
   
   @media only screen and (max-width: 1300px) {

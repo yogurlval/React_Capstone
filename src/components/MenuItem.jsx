@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { useCart } from "../components/CartContext";
 import AddToCartModal from "./AddToCartModal";
+import './MenuItem.css'
 
 const MenuItem = ({ name, type, description, price, requiresSize }) => {
   const { dispatch } = useCart();
@@ -29,8 +30,7 @@ const MenuItem = ({ name, type, description, price, requiresSize }) => {
       {/* <p>{type}</p> */}
       <p>{description}</p>
       <p>${price}</p>
-      <button onClick={addToCart}>Add To Cart</button>
-
+      <button className="addToCartBtn" onClick={addToCart}>Add To Cart</button>
       {requiresSize && isModalOpen && (
         <AddToCartModal
           item={{ name, type, description, price }}
@@ -38,6 +38,7 @@ const MenuItem = ({ name, type, description, price, requiresSize }) => {
           onAddToCart={handleAddToCart}
         />
       )}
+     
     </div>
   );
 };

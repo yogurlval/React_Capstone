@@ -42,14 +42,12 @@
   }
   
   .navbar .rightSide svg {
-    font-size: 35px;
+    font-size: 33px;
     padding: 0px;
   }
 
-  .cartCount {
+  span {
     position: absolute;
-    top: 27px;
-    right: 43px;
     background-color: rgb(237, 116, 136);
     color: white;
     border-radius: 50%;
