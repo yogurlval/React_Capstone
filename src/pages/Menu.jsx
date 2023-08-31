@@ -8,7 +8,7 @@ const Menu = () => {
   const [selectedTab, setSelectedTab] = useState("all")
 
   useEffect(() => {
-    axios.get('http://localhost:4004/menu')
+    axios.get('https://pho-king.onrender.com/menu')
     .then(response => {
       console.log(response.data); // Check the fetched data
       const menuItemsWithId = response.data.map(item => ({
@@ -50,7 +50,7 @@ const Menu = () => {
         {selectedTab === "Lo Mein" && <h1>Lo Mein</h1>}
         {selectedTab === "Extras" && <h1>Extras</h1>}
         {selectedTab === "Drinks" && <h1>Drinks</h1>}
-        {selectedTab === "Bun: Vermicelli Noodle Bowls" && <p>All Vermicellis bowls include Vermicelli Rice Noodles, Lettuce, Bean Sprouts, Cucumber, and Peanuts!</p>}
+        {selectedTab === "Bun: Vermicelli Noodle Bowls" && <p className="Bun-Description">All Vermicellis bowls include Vermicelli Rice Noodles, Lettuce, Bean Sprouts, Cucumber, and Peanuts!</p>}
         </div>
         <div className="menuList">
           {filteredMenuItems.map((menuItem, key) => (
