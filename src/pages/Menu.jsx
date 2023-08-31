@@ -9,11 +9,16 @@ const Menu = () => {
 
   useEffect(() => {
     axios.get('http://localhost:4004/menu')
-      .then(response => {
-        console.log(response.data); // Check the fetched data
-        setMenuItems(response.data);
-      })
-      .catch(error => console.log(error));
+    .then(response => {
+      console.log(response.data); // Check the fetched data
+      const menuItemsWithId = response.data.map(item => ({
+        ...item,
+        item_id: item.item_id // Include the item_id property
+      }));
+      setMenuItems(menuItemsWithId);
+      // console.log('menuItemswithId:', menuItemsWithId)
+    })
+    .catch(error => console.log(error));
   }, []);
 
   const filteredMenuItems = selectedTab === "all" ? menuItems : menuItems.filter(item => item.item_type === selectedTab)
@@ -50,15 +55,17 @@ const Menu = () => {
         <div className="menuList">
           {filteredMenuItems.map((menuItem, key) => (
             <MenuItem
-              key={key}
+              key={menuItem.item_id}
+              item_id={menuItem.item_id}
               name={menuItem.item_name} 
-              // type={menuItem.item_type}
+              size={menuItem.size}
+              type={menuItem.item_type}
               description={menuItem.description}
               price={menuItem.price}
               requiresSize={
                 selectedTab === "Pho: Rice Noodle with Beef Broth" ||
                 selectedTab === "Hu Tieu: Rice Noodle with Chicken Broth" ||
-                selectedTab === "Mi: Egg Noodle with Chicken Broth"
+                selectedTab === "Mi: Egg Noodle with Chicken Broth" 
               }
             />
           ))}

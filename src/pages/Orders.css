@@ -1,0 +1,65 @@
+
+.ordersHeader{
+  background-image: url(../assets/LemonGrass.jpg);
+  background-size: cover;
+  background-position: center center;
+  margin:0;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 4rem;
+  color: rgb(255, 249, 227);
+}
+
+.orderList-headers{
+
+    display: grid;
+    grid-template-columns: 120px 200px 140px auto;
+    grid-gap: 130px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+
+}
+
+.orderdetails-List{
+  display: grid;
+    grid-template-columns: 250px 100px 120px 160px;
+    grid-gap: 100px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 80vw;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    padding-bottom: 10px;
+}
+
+.ordersBox{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.orderID{
+  font-size: larger;
+}
+
+.Order-removeButton{
+  border: 2px solid transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    background-color: inherit;
+    padding: 5px;
+    margin-bottom: 8px;
+}
+
+.Order-removeButton:hover{
+  border-bottom: 2px solid rgb(151, 122, 245);
+  font-weight: bolder;
+  cursor: pointer;
+  opacity: 70%;
+}
+  

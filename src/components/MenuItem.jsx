@@ -3,7 +3,7 @@ import { useCart } from "../components/CartContext";
 import AddToCartModal from "./AddToCartModal";
 import './MenuItem.css'
 
-const MenuItem = ({ name, type, description, price, requiresSize }) => {
+const MenuItem = ({ item_id, name, size, type, description, price, requiresSize }) => {
   const { dispatch } = useCart();
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -12,7 +12,7 @@ const MenuItem = ({ name, type, description, price, requiresSize }) => {
       setIsModalOpen(true); // Show size modal for items that require size
     } else {
       // Add items that don't require size directly to the cart
-      handleAddToCart({ name, description, price, quantity: 1 });
+      handleAddToCart({ item_id, name, size, description, price, quantity: 1 });
     }
   };
 
@@ -21,7 +21,7 @@ const MenuItem = ({ name, type, description, price, requiresSize }) => {
   };
 
   const handleAddToCart = (modifiedItem) => {
-    dispatch({ type: "ADD_TO_CART", payload: modifiedItem });
+    dispatch({ type: "ADD_TO_CART", payload: { ...modifiedItem} });
   };
 
   return (
@@ -33,7 +33,7 @@ const MenuItem = ({ name, type, description, price, requiresSize }) => {
       <button className="addToCartBtn" onClick={addToCart}>Add To Cart</button>
       {requiresSize && isModalOpen && (
         <AddToCartModal
-          item={{ name, type, description, price }}
+          item={{ item_id, name, size, type, description, price }}
           onClose={closeModal}
           onAddToCart={handleAddToCart}
         />

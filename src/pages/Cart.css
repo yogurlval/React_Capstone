@@ -2,7 +2,7 @@
 .cartBody{
     margin: 0px;
     padding: 0;
-    background: linear-gradient(to bottom right, #e7e3ff, #fafcff);
+    background: linear-gradient(to bottom right, #003049, #fafcff);
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -13,7 +13,7 @@
     height: 90%;
     background-color: #ffffff;
     border-radius: 20px;
-    box-shadow: 0px 25px 40px #2916d933;
+    box-shadow: 0px 25px 40px #b2ade333;
 }
 
 .cartHeader{
@@ -42,18 +42,20 @@ ul {
 }
 
 .cartCategories{
-    display: flex;
+    display: grid;
+    grid-template-columns: 280px 180px 150px 150px;
+    grid-gap: 80px;
     flex-direction: row;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 80vw;
-    border-bottom: 6px double rgb(143, 116, 226);
+    border-bottom: 6px double #003049;
 }
 
-li{
+.cartListItems{
     display: grid;
-    grid-template-columns: 280px 20px 105px auto;
-    grid-gap: 120px;
+    grid-template-columns: 350px 40px 125px auto;
+    grid-gap: 130px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -61,9 +63,24 @@ li{
     border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
 }
 
-.cartListItems{
-    display: flex;
+.orderDetailsBox{
+    width: 350px;
+    height: 280px;
+    background: linear-gradient(to bottom right, #90b7cd, #cfdcee);
+    border-radius: 30px;
+    position: relative;
+    display: flex; 
     flex-direction: column;
+    justify-content: space-evenly; 
+    align-items: center;
+    margin: 30px;
+    margin-top: 40px;
+}
+
+.cart-input{
+    width: 300px;
+    margin-top: 15px;
+    display: flex;
 }
 
 .removeBtn{
@@ -79,6 +96,24 @@ li{
     font-weight: 600;
     cursor: pointer;
     opacity: 70%;
+}
+
+.submitBtn{
+    border: 2px solid transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 18px;
+    background-color: inherit;
+    padding: 5px;
+    margin-bottom: 8px;
+    
+}
+
+.submitBtn:hover{
+    border-bottom: 2px solid rgb(151, 122, 245);
+    font-weight: bolder;
+    cursor: pointer;
+    opacity: 70%;
+    
 }
 
 .price{

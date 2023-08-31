@@ -26,3 +26,27 @@
     width: 300px;
     height: 100px;
   }
+
+  .modal-radiobtns{
+    font-size: larger;
+    padding: 1px;
+  }
+
+  .modal-btn{
+    border: 2px solid transparent;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 16px;
+    background-color: #a3e7e0;
+    padding: 4px;
+    padding-left: 5px;
+    padding-right: 5px;
+  
+  }
+
+  .modal-btn:hover{
+    border: 2px double #2ec4b6;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+ 

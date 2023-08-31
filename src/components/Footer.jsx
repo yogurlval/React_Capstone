@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="socialMedia">
         <FacebookRoundedIcon />
         <InstagramIcon />
-        <p>&copy; 2023 phoking.com</p>
+        <p>&copy; 2023</p>
       </div>
     </div>
   );

@@ -5,6 +5,8 @@ const app = express()
 
 const {sequelize} = require('./util/database')
 const {getAllItems} = require('./controllers/menu')
+const {getOrders, deleteOrder} = require('./controllers/orders')
+const { submitOrder } = require('./controllers/cart')
 
 // const {Item} = require('./models/appModels')
 
@@ -16,6 +18,11 @@ app.use(cors())
 
 
 app.get('/menu', getAllItems)
+app.get('/orders', getOrders)
+
+app.post('/cart', submitOrder)
+
+app.delete('/orders/:id', deleteOrder)
   
 
 

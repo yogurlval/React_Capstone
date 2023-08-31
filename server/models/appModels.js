@@ -35,7 +35,7 @@ const {sequelize} = require('../util/database')
       primaryKey: true
     },
     user_name: DataTypes.STRING,
-    phone: DataTypes.INTEGER
+    phone: DataTypes.TEXT
   })
 
   const Order_Item = sequelize.define('Order_Item', {
@@ -45,11 +45,12 @@ const {sequelize} = require('../util/database')
       allowNull: false,
       primaryKey: true
     },
+    size: DataTypes.STRING,
     quantity: DataTypes.INTEGER,
     requests: DataTypes.TEXT
   })
 
-//submit this to database once order has been submitted
+
 Order.hasMany(Order_Item, { foreignKey: 'order_id' });
 Order_Item.belongsTo(Order, { foreignKey: 'order_id' });
 

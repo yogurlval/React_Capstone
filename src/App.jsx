@@ -6,7 +6,7 @@ import Navbar from './components/Navbar'
 import Home from './pages/Home'
 import Menu from './pages/Menu'
 import Footer from './components/Footer'
-import About from './pages/About'
+import Orders from './pages/Orders'
 import Contact from './pages/Contact'
 import Cart from './pages/Cart'
 import { CartProvider } from './components/CartContext'
@@ -22,7 +22,7 @@ function App() {
       <Routes>
       <Route path="/" element={<Home/>} />
       <Route path="/menu" element={<Menu/>}/>
-      <Route path="/about" element={<About/>}/>
+      <Route path="/orders" element={<Orders/>}/>
       <Route path="/contact" element={<Contact/>}/>
       <Route path="/cart" element={<Cart/>}/>
       </Routes>

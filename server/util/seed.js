@@ -2,7 +2,7 @@ const {Item} = require('../models/appModels')
 
 const seed = async () => {
     await Item.bulkCreate([
-        {
+        {   
             item_name: 'Vietnamese fried egg rolls w/meat',
             item_type: 'Appetizers',
             price: 3.95

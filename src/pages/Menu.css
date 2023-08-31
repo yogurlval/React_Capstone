@@ -13,8 +13,16 @@
   .menu .menuTitle {
     font-size: 13px;
   }
+
+  /* .tabContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+  } */
   
   .menuTabs {
+    
     border: none;
     margin: 6px;
     font-family: 'DM Sans', sans-serif;
@@ -24,6 +32,7 @@
     opacity: 50%;
     width: auto;
     height: auto;
+    
   }
 
   .menuTabs:hover {

@@ -14,7 +14,7 @@ const Navbar = () => {
     (total, item) => total + item.quantity,
     0
   );
-  console.log(totalItemsInCart)
+  console.log(totalItemsInCart, items)
 
   const [openLinks, setOpenLinks] = useState(false);
 
@@ -29,7 +29,7 @@ const Navbar = () => {
         <div className="hiddenLinks">
           <Link to="/">Home</Link>
           <Link to="/menu">Menu</Link>
-          <Link to="/about">About</Link>
+          <Link to="/orders">Orders</Link>
           <Link to="/contact">Contact</Link>
           <div className="cartIcon">
           <Link to="/cart">
@@ -44,7 +44,7 @@ const Navbar = () => {
       <div className="rightSide">
         <Link to="/">Home</Link>
         <Link to="/menu">Menu</Link>
-        <Link to="/about">About</Link>
+        <Link to="/orders">Orders</Link>
         <Link to="/contact">Contact</Link>
         <Link to="/cart">
           <ShoppingBasketOutlinedIcon />
