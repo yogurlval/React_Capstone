@@ -28,10 +28,10 @@ app.delete('/orders/:id', deleteOrder)
 
 
 sequelize
-    .sync({force: true})
+    .sync()
     .then(async () => {
         console.log('tables and seed data sent');
-        await seed(); // Wait for the seed function to complete
+        // await seed(); // Wait for the seed function to complete
         app.listen(4004, () => console.log(`Vibing on Port 4004`));
     })
     .catch((err) => {
