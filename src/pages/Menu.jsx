@@ -8,7 +8,7 @@ const Menu = () => {
   const [selectedTab, setSelectedTab] = useState("all")
 
   useEffect(() => {
-    axios.get('https://pho-king.onrender.com/menu')
+    axios.get('http://localhost:4004/menu')
     .then(response => {
       console.log(response.data); // Check the fetched data
       const menuItemsWithId = response.data.map(item => ({

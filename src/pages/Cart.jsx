@@ -59,7 +59,7 @@ items.forEach((item) => {
     };
     
     try {
-      const response = await axios.post("https://pho-king.onrender.com/cart", order, consolidatedItems); // Send POST request to backend
+      const response = await axios.post("http://localhost:4004/cart", order, consolidatedItems); // Send POST request to backend
       console.log('Sending to Backend:', response);
 
       dispatch({ type: "CLEAR_CART" });

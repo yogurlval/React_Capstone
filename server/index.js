@@ -27,10 +27,10 @@ app.delete('/orders/:id', deleteOrder)
 
 
 
-sequelize
-    .sync()
+sequelize.sync()
+// sequelize.sync({ force: true }).then(() => seed())
     .then(async () => {
-        await seed();
+        // await seed();
         console.log('tables and seed data sent');
         app.listen(4004, () => console.log(`Vibing on Port 4004`));
     })

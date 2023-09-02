@@ -6,6 +6,7 @@ const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: 'postgres',
 })
 console.log('Sequelize initialized.');
+
 module.exports = {
     sequelize
 }
