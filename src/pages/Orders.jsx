@@ -9,7 +9,7 @@ const Orders = () => {
   useEffect(() => {
     async function fetchOrders() {
       try {
-        const response = await axios.get("http://localhost:4004/orders");
+        const response = await axios.get("https://pho-king.onrender.com/orders");
         setOrders(response.data);
         console.log("setOrders to:", response.data);
       } catch (error) {
@@ -23,7 +23,7 @@ const Orders = () => {
   const handleRemoveOrder = async (orderId) => {
     try {
       // Make a DELETE request to your server
-      await axios.delete(`http://localhost:4004/orders/${orderId}`);
+      await axios.delete(`https://pho-king.onrender.com/orders/${orderId}`);
       console.log('Order deleted:', orderId);
       setOrders(prevOrders => prevOrders.filter(order => order.order_id !== orderId));
     
